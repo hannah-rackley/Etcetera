@@ -5,8 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import SmartRouter from './Router.js';
-
-let reducer = (oldState, action) => oldState;
+import reducer from './reducer'
 
 const categories = [{"id":"1","title":"Hats","slug":"hats"},{"id":"2","title":"Pants","slug":"pants"},{"id":"3","title":"Tops","slug":"tops"}]
 
@@ -14,7 +13,8 @@ const products = [{"id":"1","title":"Kitten Cap","description":"This kitten cap 
 
 let initialState = {
     products: products,
-    categories: categories
+    categories: categories,
+    cart: []
 }
 
 const state = createStore(
