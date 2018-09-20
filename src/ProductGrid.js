@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import SideBar from './sidebar.js';
+import NavBar from './Navigation';
+import Product from './Product'
 
 let ProductGrid = props => {
     return <div>
+        <NavBar/>
+        <SideBar/>
         {props.products.map(product => {
-        return <div key={product.id}>
-                <img src={product.imageURL}/>
-                <p>{product.description}</p>
-                <p>Price: ${product.price}</p>
-            </div>
+            return <Product {...product} key={product.id}/> })
     })}
     </div>
 }

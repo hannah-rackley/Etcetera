@@ -4,8 +4,7 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
-import { HashRouter, Route, NavLink, Switch } from 'react-router-dom';
-import SmartProductGrid from './ProductGrid.js'
+import SmartRouter from './Router.js';
 
 let reducer = (oldState, action) => oldState;
 
@@ -24,7 +23,7 @@ const state = createStore(
 
 const App =
   <Provider store={state}>
-      <SmartProductGrid />
+      <SmartRouter />
   </Provider>
 
 ReactDOM.render(App, document.getElementById('root'));
