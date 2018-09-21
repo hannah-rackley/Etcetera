@@ -7,8 +7,7 @@ const SideBar = props => {
     return (
     <div className='navbar'>
         <h1>Product Categories: </h1>
-        {props.categories.map(category => { return (
-        <NavLink to={`/category/${category.slug}`} key={category.id}>{category.title}</NavLink>);
+        {props.categories.map(category => { return <NavLink to={`/category/${category.slug}`} key={category.id}>{category.title}</NavLink>;
         })}
     </div>)
 }

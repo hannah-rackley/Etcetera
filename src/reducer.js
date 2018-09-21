@@ -11,8 +11,16 @@ const addToCart = (oldState, action) => {
     }
 }
 
+const removeFromCart = (oldState, action) => {
+    return {
+        ...oldState, 
+        cart: oldState.cart.filter(cartItem => cartItem.id !== action.product.id)
+    }
+}
+
  const reducerRouter = {
     "ADD_TO_CART": addToCart,
+    "REMOVE_FROM_CART": removeFromCart
 }
 
 const reducer = (oldState, action) => {
