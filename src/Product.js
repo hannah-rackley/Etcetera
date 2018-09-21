@@ -1,9 +1,10 @@
 import React from 'react';
 import SmartAddToCart from './addToCart';
+import { Link } from 'react-router-dom';
 
 const Product = props => {
     return (<div>
-        <h2>{props.title}</h2>
+        <Link to={`/product/${props.id}`}>{props.title}</Link>
         <img src={props.imageURL} alt={props.title}/>
         <p>{props.description}</p>
         <p>Price: ${props.price}</p>

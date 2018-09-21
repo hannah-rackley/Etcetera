@@ -5,6 +5,7 @@ import SmartProductScreen from './ProductScreen.js'
 import CategoryScreen from './CategoryScreen.js'
 import About from './About'
 import SmartCart from './Cart'
+import ProductSpotlightPage from './ProductSpotlightPage'
 
 const Router = props => {
     return (
@@ -14,7 +15,8 @@ const Router = props => {
                    <Route exact path='/home' component={SmartProductScreen} />
                    <Route path='/about' component={About}/>
                    <Route path='/cart' component={SmartCart}/>
-                   <Route exact path='/category/:slug' component={CategoryScreen} />
+                   <Route exact path='/category/:id' component={CategoryScreen} />
+                   <Route exact path='/product/:id' component={ProductSpotlightPage} />
                </Switch>
            </div>
        </HashRouter>
