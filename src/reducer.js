@@ -18,9 +18,17 @@ const removeFromCart = (oldState, action) => {
     }
 }
 
+const loadProducts = (oldState, action) => {
+    return {
+        ...oldState, 
+        products: action.products, 
+    }
+}
+
  const reducerRouter = {
     "ADD_TO_CART": addToCart,
-    "REMOVE_FROM_CART": removeFromCart
+    "REMOVE_FROM_CART": removeFromCart,
+    "LOAD_PRODUCTS": loadProducts
 }
 
 const reducer = (oldState, action) => {

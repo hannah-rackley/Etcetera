@@ -6,6 +6,7 @@ let ProductGrid = props => {
     return (
     <div>
         {props.products.map(product => {
+            console.log(product);
             return <Product {...product} key={product.id}/> })}
     </div>)
 }

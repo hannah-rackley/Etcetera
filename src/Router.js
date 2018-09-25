@@ -1,7 +1,7 @@
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import React from 'react';
-import SmartProductScreen from './ProductScreen.js'
+import SmartHomepage from './fetchProducts'
 import CategoryScreen from './CategoryScreen.js'
 import About from './About'
 import SmartCart from './Cart'
@@ -12,7 +12,7 @@ const Router = props => {
        <HashRouter>
            <div>
                <Switch>
-                   <Route exact path='/home' component={SmartProductScreen} />
+                   <Route exact path='/home' component={SmartHomepage} />
                    <Route path='/about' component={About}/>
                    <Route path='/cart' component={SmartCart}/>
                    <Route exact path='/category/:id' component={CategoryScreen} />

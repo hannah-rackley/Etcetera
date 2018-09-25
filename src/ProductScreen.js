@@ -8,10 +8,8 @@ let ProductScreen = props => {
     return <div>
         <NavBar/>
         <SideBar/>
-        <ProductGrid products={props.products}/>
+        <ProductGrid {...props}/>
     </div>
 }
 
-let SmartProductScreen = connect(state => state)(ProductScreen)
-
-export default SmartProductScreen;
+export default ProductScreen;

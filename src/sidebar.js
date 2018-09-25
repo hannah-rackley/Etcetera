@@ -18,3 +18,4 @@ let SmartSideBar = withRouter(connect((state, props) => ({
 }))(SideBar));
 
 export default SmartSideBar;
+
